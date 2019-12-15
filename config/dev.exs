@@ -52,7 +52,8 @@ config :card_control, CardControlWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/card_control_web/views/.*(ex)$},
-      ~r{lib/card_control_web/templates/.*(eex)$}
+      ~r{lib/card_control_web/templates/.*(eex)$},
+      ~r{lib/card_control_web/live/.*(ex)$}
     ]
   ]
 
