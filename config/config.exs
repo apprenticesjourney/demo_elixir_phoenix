@@ -15,7 +15,8 @@ config :card_control, CardControlWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "x5qZHkDG7uRmk822JWDmkqbnfJ915MHeDrntApoVRkZy1J97MncJ6iAbz5WfoN+8",
   render_errors: [view: CardControlWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: CardControl.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: CardControl.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [signing_salt: "Q7/V+DeXRwDHvsdxdfQjcIb9AIHD1rFJ"]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,6 +25,7 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+config :phoenix, template_engines: [leex: Phoenix.LiveView.Engine]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
